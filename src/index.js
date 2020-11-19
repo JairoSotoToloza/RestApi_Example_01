@@ -13,6 +13,7 @@ app.use(express.json()); // metodo que permite al server entender formatos json.
 
 // Routes
 app.use(require('./routes/index')); // Utiliza desde la carpeta Routes el archivo index.js
+app.use('/api/movies',require('./routes/movies'));
 
 // Starting the server
 app.listen(app.get('port'), () => { // utilizamos la variable del puerto, 'port' = 3000
